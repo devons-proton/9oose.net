@@ -28,8 +28,8 @@ body {
 }
 
 /* THE FIX: We target the <div> AND the injected <svg>! */
-.svg-column,
-.svg-column svg {
+object.svg-column,
+object.svg-column svg {
     width: 100% !important;
     height: auto !important;
     max-width: 100%;
@@ -84,7 +84,7 @@ body {
         box-shadow: none !important;
     }
 
-    .svg-column {
+    object.svg-column {
         /* To avoid gap-shorthand issues in print engines, use precise margins */
         width: 32% !important;
         margin-right: 2% !important;
@@ -95,7 +95,7 @@ body {
     }
 
     /* Remove the right margin from every 3rd item so the math fits perfectly */
-    .svg-column:nth-child(3n) {
+    object.svg-column:nth-child(3n) {
         margin-right: 0 !important;
     }
 
