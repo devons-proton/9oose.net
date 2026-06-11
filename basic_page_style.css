@@ -1,3 +1,11 @@
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Prevents horizontal scrollbars/bleeding on screens */
+}
 /* --------------------------------------
  *  1. MOBILE FIRST (Default Screen Styles)
  *  -------------------------------------- */

@@ -15,36 +15,5 @@
         <div class="svg-column" data-src="homepage/new-standard-homepage-3.svg"></div>
       </div>
     </main>
-
-    <script>
-      // The new Inline Injection Script
-      window.addEventListener('load', () => {
-          const columns = document.querySelectorAll('.svg-column');
-
-          columns.forEach(async (col) => {
-              try {
-                  // 1. Fetch the raw SVG file from your server
-                  const source = col.getAttribute('data-src');
-                  const response = await fetch(source);
-
-                  if (!response.ok) throw new Error("Could not fetch SVG");
-
-                  // 2. Read it as text and inject it directly into the webpage
-                  const svgText = await response.text();
-                  col.innerHTML = svgText;
-
-                  // 3. Now that it is natively on the page, easily fix the links!
-                  const links = col.querySelectorAll('a');
-                  links.forEach(link => {
-                      link.setAttribute('target', '_top'); // Break out!
-                      link.setAttribute('rel', 'noopener noreferrer'); // Security lock
-                  });
-
-              } catch (e) {
-                  console.error(`Failed to inject ${col.getAttribute('data-src')}:`, e);
-              }
-          });
-      });
-    </script>
   </body>
 </html>

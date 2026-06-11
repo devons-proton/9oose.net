@@ -438,15 +438,10 @@
                             <use xlink:href="#g227E82ABA33375784BF62BD7CCC9EA26" x="30.789" y="0" fill="#000000" fill-rule="nonzero"/>
                             <use xlink:href="#gD2129FC55146F26AC4A68411C386BAD6" x="35.793" y="0" fill="#000000" fill-rule="nonzero"/>
                             <use xlink:href="#gD2129FC55146F26AC4A68411C386BAD6" x="37.791" y="0" fill="#000000" fill-rule="nonzero"/>
-                            <use xlink:href="#gE7CEE5C6A210840AF4DB31348DD0BD94" x="39.788999999999994" y="0" fill="#000000" fill-rule="nonzero"/>
-                            <use xlink:href="#gA96A2C7B45B85D1A43BCE0A6F939826F" x="42.291" y="0" fill="#000000" fill-rule="nonzero"/>
-                            <use xlink:href="#g87F07BB473544EB0877C9E900A135726" x="47.294999999999995" y="0" fill="#000000" fill-rule="nonzero"/>
-                            <use xlink:href="#gDA5CBC188CD4B3EE6A2C2EEA1DCF8585" x="49.797" y="0" fill="#000000" fill-rule="nonzero"/>
-                            <use xlink:href="#gD2129FC55146F26AC4A68411C386BAD6" x="57.294" y="0" fill="#000000" fill-rule="nonzero"/>
                         </g>
-                        <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.45000000000000007" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(1 0 0 1 126.93867594383119 7.479)" d="M 0 0h 54.411324 "/>
+                        <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.45000000000000007" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(1 0 0 1 126.93867594383119 7.479)" d="M 0 0h 34.908325 "/>
                         <a transform="matrix(1 0 0 1 122.05799999999998 -2.9250000000000003)" href="goosewall.html" xlink:href="goosewall.html">
-                            <rect width="59.292" height="12.411000000000001" fill="transparent" stroke="none"/>
+                            <rect width="39.789" height="12.411000000000001" fill="transparent" stroke="none"/>
                         </a>
                     </g>
                 </g>
