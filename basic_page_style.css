@@ -1,0 +1,104 @@
+/* --------------------------------------
+ *  1. MOBILE FIRST (Default Screen Styles)
+ *  -------------------------------------- */
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.document-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    background: white;
+    border: 3px solid black;
+    box-shadow: 10px 10px 0px black;
+    padding: 10px;
+}
+
+/* THE FIX: We target the <div> AND the injected <svg>! */
+.svg-column,
+.svg-column svg {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    display: block; /* Removes weird spacing below images */
+}
+
+/* --------------------------------------
+ *  2. DESKTOP SCREENS
+ *  -------------------------------------- */
+@media screen and (min-width: 768px) {
+    .document-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1440px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+/* --------------------------------------
+ * 3. PERFECT PRINT SETTINGS
+ * -------------------------------------- */
+@media print {
+    @page {
+        size: landscape;
+        margin: 0 0 0 0.5in;
+    }
+
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important; /* Ensure screen margin: 0; padding: 20px; is wiped out */
+    }
+
+    .document-container {
+        /* Force clear the screen layout settings */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        /* Wipe out the 20px grid gap and use standard margins for safety */
+        gap: 0 !important;
+        row-gap: 0 !important;
+        column-gap: 0 !important;
+
+        /* Wipe out the 40px bottom margin completely */
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .svg-column {
+        /* To avoid gap-shorthand issues in print engines, use precise margins */
+        width: 32% !important;
+        margin-right: 2% !important;
+        margin-bottom: 0 !important; /* Reset row heights */
+
+        break-inside: avoid !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Remove the right margin from every 3rd item so the math fits perfectly */
+    .svg-column:nth-child(3n) {
+        margin-right: 0 !important;
+    }
+
+    /* Handle the page breaks cleanly */
+    .svg-column:nth-child(3n):not(:last-child) {
+        break-after: page !important;
+    }
+
+    /* Safety override: strip margins from final row completely */
+    .svg-column:last-child,
+    .svg-column:nth-last-child(-n+3) {
+        margin-bottom: 0 !important;
+    }
+}
